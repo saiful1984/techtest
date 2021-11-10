@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+    techtest:
+        build: ./techtest
+        container_name: techtest
+        restart: always
+        ports:
+            - "8000:5000"
