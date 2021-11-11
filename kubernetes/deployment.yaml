@@ -35,7 +35,7 @@ spec:
         spec:
             containers:
             -   name: userdb
-                image: saiful1984/techtest:latest
+                image: image: {{ .Values.deployment.image }}:{{ .Values.deployment.tag }}
                 imagePullPolicy: Always
                 ports:
                     - containerPort: 5000
