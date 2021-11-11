@@ -2,8 +2,8 @@ version: "3.7"
 
 services:
     techtest:
-        build: ./techtest
-        container_name: techtest
+        build: ./src
+        container_name: userdb
         restart: always
         ports:
             - "8000:5000"
