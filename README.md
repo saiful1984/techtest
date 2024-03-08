@@ -1,32 +1,38 @@
-Basic User data library
+# User Data Library
 
-Basic User data library creates user data(firstname, middlename, lastname and age) in database through a build it restapi.
-This mini app is created with Flask and sqlite
+## Project Description
+Basic User Data Library is a Flask-based REST API that creates user data (firstname, middlename, lastname, and age) in a database. This mini application is built with Flask and SQLite.
 
-Installation
+## Technologies Used
+- Python
+- Flask
+- SQLite
+- Docker
+- Kubernetes
+- REST API
 
-Deploy application from docker-compose.yaml
-    docker-compose build
-    docker-compose up
+## Installation
 
-or
+### Deploy with Docker Compose
 
-Deploy kubernetes cluster using
-    kubectl apply -f kubernetes/deployment.yaml
-    kubectl apply -f kubernetes/service.yaml
-    kubectl apply -f kubernetes/configmap.yaml
+docker-compose build
+docker-compose up
 
-or
+### Deploy with Kubernetes
+kubectl apply -f kubernetes/deployment.yaml
+kubectl apply -f kubernetes/service.yaml
+kubectl apply -f kubernetes/configmap.yaml
 
-Deploy helm chart
+### Deploy with Helm Charts
 helm install userdb-helm userdb-helm --values ./userdb-helm/values.yaml
 
-Usage
+## Usage
 
-The restapi will be published in http://localhost:8000/api/v1.0/apiTasks/ in your system.
-Trigger "python test_app.py" to run the entire set of restapi calls.
-Below restapi calls can be send through POSTMAN.
-1. POST: http://localhost:8000/api/v1.0/apiTasks/1?firstName=syed&middelName=saiful&lastName=arefin&age=37
-2. GET: http://localhost:8000/api/v1.0/apiTasks/1
-3. POST: http://localhost:8000/api/v1.0/apiTasks/1?firstName=syed&middelName=saiful&lastName=arefin&age=20
-4. DELETE: http://localhost:8000/api/v1.0/apiTasks/1
+The REST API will be published at http://localhost:8000/api/v1.0/apiTasks/ in your system. 
+You can trigger the python test_app.py script to run the entire set of REST API calls. 
+Below are the available REST API endpoints:
+
+    POST: http://localhost:8000/api/v1.0/apiTasks/1?firstName=syed&middelName=saiful&lastName=arefin&age=37
+    GET: http://localhost:8000/api/v1.0/apiTasks/1
+    POST: http://localhost:8000/api/v1.0/apiTasks/1?firstName=syed&middelName=saiful&lastName=arefin&age=20
+    DELETE: http://localhost:8000/api/v1.0/apiTasks/1
